@@ -1,0 +1,61 @@
+ <div class="modal-scroller custom-scroll">
+        <div class="modal-body" style="margin-top: -812.5px; margin-left: -400.5px;">
+            <div class="modal-body__inner">
+                <div class="communications-template amoforms"><input type="radio" name="amoform-toggler"
+                                                                     id="amoforms__editor"
+                                                                     class="amoforms-tab-toggler js-form-changes-skip"
+                                                                     checked="">
+                    <div class="amoforms__tabs">
+                        <div class="amoforms__tab-editor">
+                            <div class="amoforms__tab-editor-left"><input name="name"
+                                                                          class="communications-template__input js-communications-template-name text-input"
+                                                                          type="text" placeholder="Поле для вывода результата"
+                                                                          value="{{out}}"
+                                                                          autocomplete="off">
+                                <div class="communications-template__content"
+                                     data-dnd-before="Перенесите сюда файлы, чтобы прикрепить их"
+                                     data-dnd-after="Отпустите клавишу мыши, чтобы прикрепить файлы"><textarea id=""
+                                                                                                               class="text-input text-input-textarea communications-template__textarea js-communications-template-content"
+                                                                                                               tabindex=""
+                                                                                                               name="content"
+                                                                                                               placeholder=""
+                                                                                                               style="overflow: hidden; overflow-wrap: break-word; height: 173px;">{{input}}</textarea>
+
+                                </div>
+                                <div class="communications-template__bottom">
+                                    <button type="button"
+                                            class="button-input   button-input-disabled js-communications-template-save"
+                                            tabindex="" id=""><span class="button-input-inner "><span
+                                            class="button-input-inner__text">Сохранить </span></span></button>
+                                    <button type="button"
+                                            class="button-input button-cancel js-communications-template-cancel"
+                                            tabindex=""
+                                            id="" style=""><span>Отменить</span></button>
+                                </div>
+                            </div>
+                            <div class="amoforms__tab-editor-right">
+                                <div class="amoforms__sidebar">
+                                    <div class="amoforms__sidebar__wrapper">
+                                        <!-- отображение переменных сделок -->
+                                        <div class="amoforms__sidebar__header">Сделки</div>
+                                        <div class="amoforms__sidebar__items amoforms__sidebar__items_showed"
+                                             style="display: block">
+                                            {% for card in cards %}
+                                            <div class="amoforms__sidebar__item js-communications-template-marker"
+                                                 data-marker="'{{card.name}}'"><span>{{card.name}}</span>
+                                            </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+
+                                    <!-- отображение переменных сделок -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="default-overlay modal-overlay  modal-overlay_white  default-overlay-visible"><span
+            class="modal-overlay__spinner spinner-icon spinner-icon-abs-center" style="display: none;"></span></div>

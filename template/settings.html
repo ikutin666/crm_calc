@@ -1,0 +1,160 @@
+
+<div class ="list__body-right__top">
+    <div class="content__top__title">
+        <h2 class="content__top__preset__caption">Калькулятор полей</h2>
+    </div>
+</div>
+<div class="safety_settings__section_new monitoring-settings__section">
+    <div class="safety_settings__section_head_new">
+        <div class="safety_settings__section_head_new_title">
+            Добавление полей и формул
+        </div>
+    </div>
+    <div class="safety_settings__section_new_text">
+        <p>
+            Вы можете выбрать поля из списка, и составить формулы
+        </p>
+    </div>
+    <div class="communications__templates list__body__holder js-hs-wrapper hs-wrapper_hide-boundary hs-wrapper" id="templates_list_holder">
+        <div class="communications__templates-divider">
+
+        </div>
+        <div class="list__table__holder js-hs-scroller custom-scroll" style="margin-bottom: 0px;">
+            <div class="js-scroll-container list__table " id="list_table">
+                <div class="js-list-columns-group list__col-group" id="list_col_group">
+                    <div class="js-list-column-code-id list-column-code-id js-list-column list__col-group__column" data-field-code="id">
+
+                    </div>
+                    <div class="js-list-column-code-reply_name js-list-column list__col-group__column" style="width:30%; " data-field-code="reply_name">
+
+                    </div>
+                    <div class="js-list-column-code-reply_text js-list-column list__col-group__column" style="width:70%; " data-field-code="reply_text">
+
+                    </div>
+                </div>
+                <div class="list-row list-row-head js-list-row js-list-row-head " id="list_head">
+                    <div class="list-row__cell js-hs-prevent list-row__cell-head cell-head list-row__cell-template-id list-row__cell-id">
+                        <div class="cell-head__inner">
+                            <label class="control-checkbox   ">
+                                <div class="control-checkbox__body">
+                                    <input type="checkbox" class="" name="" id="list_all_checker" disabled="" value="" data-value="">
+                                    <span class="control-checkbox__helper ">
+
+                                    </span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="list-row__cell js-hs-prevent js-resizable-cell list-row__cell-head cell-head js-cell-head  list-row__cell-template-text list-row__cell-reply_name  ui-resizable" data-field-template="text" data-field-code="reply_name" style="width:30.00%; ">
+                        <div class="cell-head__inner">
+                            <div class="cell-head__inner-content">
+                                <span class="cell-head__dots icon icon-v-dots">
+
+                                </span>
+                                <span class="cell-head__title">
+                                    Результирующее поле
+                                </span>
+                            </div>
+                            <div class="cell-head__resize-ghost">
+
+                            </div>
+                        </div>
+                        <div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;">
+
+                        </div>
+                    </div>
+                    <div class="list-row__cell js-hs-prevent js-resizable-cell list-row__cell-head cell-head js-cell-head  list-row__cell-template-text list-row__cell-reply_text  ui-resizable" data-field-template="text" data-field-code="reply_text" style="width:70.00%; ">
+                        <div class="cell-head__inner">
+                            <div class="cell-head__inner-content">
+                                <span class="cell-head__dots icon icon-v-dots">
+
+                                </span>
+                                <span class="cell-head__title">
+                                    Формула
+                                </span>
+                            </div>
+                            <div class="cell-head__resize-ghost">
+
+                            </div>
+                        </div>
+                        <div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;">
+
+                        </div>
+                    </div>
+                </div>
+                <div data-id="0" class="list-row js-list-row js-pager-list-item__1  js-item-id-0 list-row_adding " id="list_item_0">
+                    <div class="list-row__cell js-list-row__cell list-row__cell-template-id list-row__cell-id  ">
+                        <div class="content-table__item__inner" style="overflow:visible">
+                            <label class="control-checkbox   ">
+                                <div class="control-checkbox__body">
+                                    <input type="checkbox" class="" name="" id="lead_0" disabled="" value="0" data-value="0">
+                                    <span class="control-checkbox__helper ">
+
+                                    </span>
+                                </div>
+
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="list-row__cell js-list-row__cell list-row__cell-template-text list-row__cell-reply_name  " data-field-code="reply_name" data-field-id="reply_name">
+                        <div class="content-table__item__inner" title="Добавить новый шаблон">
+                            <span class="block-selectable">
+                                Добавить новую формулу
+                            </span>
+                        </div>
+                    </div>
+                    <div class="list-row__cell js-list-row__cell list-row__cell-template-text list-row__cell-reply_text  " data-field-code="reply_text" data-field-id="reply_text">
+                        <div class="content-table__item__inner" title="">
+                            <span class="block-selectable">
+                                &nbsp;
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Добавление элементов таблицы -->
+                {% for card in cards %}
+                <div class="list-row js-list-row" id="list_item_{{card.out}}" data-id="{{card.out}}">
+                    <div class="list-row__cell js-list-row__cell list-row__cell-template-id list-row__cell-id  ">
+                        <div class="content-table__item__inner" style="overflow:visible">
+                            <label class="control-checkbox   ">
+                                <div class="control-checkbox__body">
+                                    <input type="checkbox" class="" name="" id="lead" value="{{card.out}}" data-value="{{card.out}}">
+                                    <span class="control-checkbox__helper ">
+
+                                                    </span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="list-row__cell js-list-row__cell list-row__cell-template-reply_name list-row__cell-reply_name  "
+                         data-field-code="reply_name" data-field-id="reply_name">
+                        <div class="content-table__item__inner content-table__item__inner-template-reply_name">
+                            <a href="#" class="js-navigate-link list-row__template-name__table-wrapper__reply_name-link" title="{{card.out}}">
+                                {{card.out}}
+                            </a>
+                        </div>
+                    </div>
+                    <div class="list-row__cell js-list-row__cell list-row__cell-template-text list-row__cell-reply_text  "
+                         data-field-code="reply_text" data-field-id="reply_text">
+                        <div class="content-table__item__inner" title={{card.input}}">
+                                            <span class="block-selectable">
+                                                {{card.input}}
+                                            </span>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                <!-- Добавление элементов таблицы -->
+            </div>
+        </div>
+        <div class="communications__list-footer js-communications-load-more-templates hidden" id="list_pagination">
+            Показать еще
+        </div>
+        <div class="hs__pane hs__pane_hidden">
+            <div class="hs__bar ui-draggable ui-draggable-handle" style="position: relative; width: 795px;">
+
+        </div>
+        </div>
+    </div>
+</div>
